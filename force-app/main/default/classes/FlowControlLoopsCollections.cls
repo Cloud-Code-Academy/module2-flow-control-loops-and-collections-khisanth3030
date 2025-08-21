@@ -29,8 +29,8 @@ public with sharing class FlowControlLoopsCollections {
      * @return "Hello World!" if x greater than y, otherwise return null.
      */
     public static String helloWorld(Integer x, Integer y) {
-        String HW = 'Hello World!';
-        if( x > y ){return HW;}
+        String result = 'Hello World!';
+        if( x > y ){return result;}
         return null; // Replace null with the variable you used to store the result
     }
 
@@ -75,7 +75,14 @@ public with sharing class FlowControlLoopsCollections {
      * @return A string indicating whether the number is "Positive", "Negative", or "Zero", or null if the number is null.
      */
     public static String checkNumber(Integer a) {
-        return null; // Replace null with the variable you used to store the result
+        String result;
+
+        if (a == null)  { result = null;}
+        if (a == 0)     { result = 'Zero';}
+        if (a > 0)      { result = 'Positive';} 
+        if (a < 0)      { result = 'Negative';}
+        return result;
+        // Replace null with the variable you used to store the result
     }
 
     /**
